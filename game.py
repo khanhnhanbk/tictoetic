@@ -42,7 +42,7 @@ def drawText(win, letter: str, pos):
         color = RED
     else:
         color = BLUE
-    font = pygame.font.SysFont(None, 90)
+    font = pygame.font.SysFont("Arial", 90)
     img = font.render(letter, True, color)
     img_rect = img.get_rect(
         center=pygame.Rect(50 + pos[0] * 100, 100 + pos[1] * 100, 100, 100).center
@@ -178,7 +178,7 @@ def play(game, x_player, o_player, print_game=True):
                     x_win += 1
                 else:
                     o_win += 1
-                font = pygame.font.SysFont(None, 90)
+                font = pygame.font.SysFont("Arial", 90)
                 img = font.render(letter + ' WIN', True, YELLOW)
                 img_rect = img.get_rect(
                 center=pygame.Rect(0 ,0, 400, 100).center)
@@ -206,7 +206,7 @@ def play(game, x_player, o_player, print_game=True):
         if not game.empty_squares():
             # print('It\'s a tie!')
             tie += 1
-            font = pygame.font.SysFont(None, 90)
+            font = pygame.font.SysFont("Arial", 90)
             img = font.render('TIE', True, YELLOW)
             img_rect = img.get_rect(
                 center=pygame.Rect(
